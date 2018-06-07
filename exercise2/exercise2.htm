@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Book Form</title>
+<style>
+body {
+	margin:auto;
+	width:1000px;
+	background-color:#66799E
+}
+table {
+	color: black;
+	font-family: "MySecondFont", "arial narrow", "arial";
+	background-color: #FFF;
+	border: 2px black solid;
+	margin:auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.9);
+	
+}
+td.right {
+	text-align:right
+}
+.ch {
+	background-color : #D1E0E5;
+	border: 1px solid black;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<form action="ProcessExercise2.php" method="post">
+
+	<table>
+		<tr>
+			<th style="text-align:center" colspan="2">Book Order Form</th>
+		
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td><input name="name" id="name" type="text" /></td>
+		</tr>
+		<tr>
+			<td>Quantity:</td>
+			<td><input name="qty" id="qty" type="text" /></td>
+		</tr>
+		<tr>
+		<td>Book:</td>
+			<td><select name="booktype">
+			<option value="art">Art Book</option>
+			<option value="computer">Computer Book</option>
+			<option value="math">Math Book</option>
+			<option value="spanish">Spanish Book</option>
+			</select></td>
+			
+		</tr>
+		<tr>
+			<td><input class="ch" name="Reset" type="reset" value="reset" /></td>
+			<td class="right"><input class="ch" name="Submit" type="submit" value="submit" /></td>
+		</tr>
+	</table>
+
+</form>
+
+</body>
+
+</html>

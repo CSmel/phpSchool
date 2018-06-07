@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Book-O-Rama Catalog Search</title>
+  <style>
+body {
+	margin:auto;
+	width:1000px;
+	background-color:#66799E
+}
+table {
+	color: black;
+	font-family: "MySecondFont", "arial narrow", "arial";
+	background-color: #FFF;
+	border: 2px black solid;
+	margin:auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.9);
+	
+}
+td.right {
+	text-align:right
+}
+.ch {
+	background-color : #D1E0E5;
+	border: 1px solid black;
+}
+
+
+</style>
+</head>
+
+<body>
+
+  <table>
+   <form action="results.php" method="post">
+	  <tr>
+		  <td> <h1>Book-O-Rama Catalog Search</h1></td>
+	  </tr>
+	  <tr>
+		  <td>Choose Search Type:</td>
+	  </tr>
+	  <tr>
+		  <td>
+    <select class="ch" name="searchtype">
+      <option value="author">Author
+      <option value="title">Title
+      <option value="isbn">ISBN
+    </select>
+    </td>
+	  </tr>
+	  <tr>
+		  <td>Enter Search Term:</td>
+	  </tr>
+	  <tr>
+		  <td>
+    <input class="ch" name="searchterm" type="text" size="40">
+    </td>
+	  </tr>
+	  <tr>
+		  <td>
+    <input class="ch" type="submit" name="submit" value="Search">
+  		<input class="ch" name="Reset" type="reset" value="reset"></td>
+	  </tr>
+	    </form>
+  </table>
+
+</body>
+</html>
+

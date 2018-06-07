@@ -1,0 +1,82 @@
+<?php
+  
+
+include ('book_sc_fns.php');
+
+// Create empty array to hold isbn numbers
+	$isbn_array = array();
+     
+// query database for the isbn numbesr
+   $conn = db_connect();
+   $query = "select isbn, title from books";
+   $result = @$conn->query($query);
+  
+  
+  
+   if (!$result) {
+     echo "Could access the data";
+   } else {
+       // Get the number of records/isbns
+		$num_isbns = @$result->num_rows;
+		 
+		 
+		// 
+
+		for ($count=0; $count < $num_isbns; $count++) {
+			//$isbn_array[$count] =$result->fetch_assoc();
+			$row =$result->fetch_assoc();
+			$isbn_array[]= $row;
+			
+			
+			
+			
+   }
+	}
+
+  shuffle($isbn_array );
+?>
+<html>
+<head>
+  <title>Search Page Sample</title>
+</head>
+<body>
+
+<h1>Search Page Sample</h1>
+<div align="center">
+<table width = 100%>
+<tr>
+
+
+ <?php
+ echo "<table>";
+
+
+// for($i=0;$i<3; $i++) {
+     // echo "<tr>";
+	 // $value = 
+	 // echo "<td><img src=\"images/".$row['isbn'].".jpg\"
+                  // style=\"border: 1px solid black\"/>";
+	 // echo "</tr>";
+	 // }
+$num_array = array();
+
+ foreach ($isbn_array as $value) {
+  $num_array[]=$value['isbn'];
+  
+  echo $num_array[0];
+	echo "<tr >";
+    echo $value['isbn'] . "<br>";
+	echo "<td><img src=\"images/".$value['isbn'] .".jpg\"
+                  // style=\"border: 1px solid black\"/>";
+	 echo "</tr>";
+ }
+
+echo "</table>";
+
+
+?>
+</tr>
+</table>
+</div>
+</body>
+</html>

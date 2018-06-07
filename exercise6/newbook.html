@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title>Book-O-Rama - New Book Entry</title>
+    <style>
+body {
+	margin:auto;
+	width:1000px;
+	background-color:#66799E
+}
+table {
+	color: black;
+	font-family: "MySecondFont", "arial narrow", "arial";
+	background-color: #FFF;
+	border: 2px black solid;
+	margin:auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.9);
+	
+}
+td.right {
+	text-align:right
+}
+.ch {
+	background-color : #D1E0E5;
+	border: 1px solid black;
+}
+
+
+</style>
+
+</head>
+
+<body>
+  <h1>
+  <table>
+    <form action="insert_book.php" method="post">
+
+	  <tr>
+		  <td colspan="2"><h1>Book-O-Rama - New Book Entry</h1></td>
+	  </tr>
+	  <tr>
+		  <td>ISBN</td>
+		  <td><input class="ch" type="text" name="isbn" maxlength="13" size="13"></td>
+	  </tr>
+	  <tr>
+		  <td>Author</td>
+		  <td> <input class="ch" type="text" name="author" maxlength="30" size="30"></td>
+	  </tr>
+	  <tr>
+		  <td>Title</td>
+		  <td> <input class="ch" type="text" name="title" maxlength="60" size="30"></td>
+	  </tr>
+	  <tr>
+		  <td>Cat ID</td>
+		  <td><select class="ch" name="catid">
+			<option value="1">Internet</option>
+			<option value="2">Self-Help</option>
+			<option value="3">Equine</option>
+			<option value="4">Gardening</option>
+			<option value="5">Fiction</option>
+			<option value="6">Art</option>
+			<option value="7">Running</option>
+			<option value="8">Traveling</option>
+			</select></td>
+	  </tr>
+	  <tr>
+		  <td>Price $</td>
+		  <td><input class="ch" type="text" name="price" maxlength="7" size="7"></td>
+	  </tr>
+	  <tr>
+		  <td style="height: 23px">Description</td>
+		  <td style="height: 23px"> <input class="ch" type="text" name="description" maxlength="60" size="30"></td>
+	  </tr>
+	  <tr>
+		  <td><input class="ch" type="submit" value="Register"></td>
+		  <td>&nbsp;</td>
+	  </tr>
+	    </form>
+  </table>
+  </h1>
+
+    <table border="0">
+      </table>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+  <title>Book-O-Rama - New Book Entry</title>
+    <style>
+body {
+	margin:auto;
+	width:1000px;
+	background-color:#fff;
+	font-family: arial
+}
+table {
+	color: black;
+	font-family: "MySecondFont", "arial narrow", "arial";
+	background-color: #FFF;
+	border: 2px black solid;
+	margin:auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background-color: rgb(206, 206, 206);
+	
+}
+table.form {width:1000px}
+td.right {
+	text-align:right
+}
+/*  table data */
+a {
+	color: black;
+	text-decoration: none;
+	border: 2px solid #D1E0E5;
+}
+a:hover {
+	color: black;
+	background-color: #358AA4;
+	text-decoration: blink;
+}
+a:visited {
+	color: black;
+	text-decoration: none;
+	border: 2px solid #D1E0E5;
+	}
+	
+.ch {
+	background-color : #D1E0E5;
+	border: 1px solid black;
+}
+</style>
+
+</head>
+
+<body>
+  <h1>
+  <table class="form">
+    <form action="insert_review.php" method="post">
+
+	  <tr>
+		  <td colspan="2"><h2>Customer Review for <?php echo $book['title'] , ''; ?></h2></td>
+	  </tr>
+	  <tr>
+		  <td>ISBN:</td>
+		  <td><input class="ch" type="text" name="isbn"  maxlength="13" size="13"value="<?php echo $book['isbn'] , ''; ?>"</td>
+	  </tr>	
+	  <tr>
+		  <td style="height: 23px">Customer's Name:</td>
+		  <td style="height: 23px"> <input class="ch" type="text" name="name" maxlength="60" size="30"></td>
+	  </tr>	  
+	  <tr>
+		  <td style="height: 23px">Review:</td>
+		  <td style="height: 23px"> <textarea class="ch" type="text" name="review" maxlength="250" size="60"></textarea></td>
+	  </tr>
+	  <tr>
+		  <td><input class="ch" type="submit" value="Enter"></td>
+		  <td>&nbsp;</td>
+	  </tr>
+	    </form>
+  </table>
+  </h1>
+
+    <table border="0">
+      </table>
+
+</body>
+</html>
